@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog | CyberAlpha</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- Top Terminal Bar -->
+  <header class="terminal-bar flex justify-between items-center text-green-400">
+    <span>CyberAlpha@portfolio:~/blog</span>
+    <nav class="space-x-4 text-sm">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="speaking.html">Speaking</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Blog Posts Section -->
+  <main class="flex flex-col justify-center items-center min-h-screen text-green-400 px-4">
+    <div class="max-w-3xl mt-10">
+      <p class="text-lg prompt">cat blog_posts.txt</p>
+      <br />
+      <!-- Blog Post Links -->
+      <ul class="space-y-4 ml-4">
+        <li class="prompt">
+          <a href="posts/linux-hardening-guide.html"><strong>[01]</strong>&nbsp;Linux Hardening Guide for Beginners</a>
+        </li>
+        <li class="prompt">
+          <a href="posts/ai-in-cybersecurity.html"><strong>[02]</strong>&nbsp;AI Applications in Cybersecurity</a>
+        </li>
+        <li class="prompt">
+          <a href="posts/building-ethical-hacking-tool.html"><strong>[03]</strong>&nbsp;Building an Ethical Hacking Tool</a>
+        </li>
+        <li class="prompt">
+          <a href="posts/introduction-to-ethical-hacking.html"><strong>[04]</strong>&nbsp;Introduction to Ethical Hacking</a>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+</body>
+</html>

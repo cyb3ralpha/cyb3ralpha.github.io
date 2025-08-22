@@ -1,45 +1,46 @@
-// Main JavaScript for index.html
-document.addEventListener("DOMContentLoaded", () => {
-    // Smooth scroll for navigation links
-    const navLinks = document.querySelectorAll("nav a");
-    navLinks.forEach(link => {
-        link.addEventListener("click", (e) => {
-            if (link.getAttribute("href").startsWith("#")) {
-                e.preventDefault();
-                document.querySelector(link.getAttribute("href")).scrollIntoView({
-                    behavior: "smooth"
-                });
-            }
-        });
-    });
+// main.js
 
-    // Mobile menu toggle
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navMenu = document.querySelector("nav ul");
+document.addEventListener("DOMContentLoaded", function () {
+    const navToggle = document.querySelector(".nav-toggle");
+    const navMenu = document.querySelector(".nav-menu");
 
-    if (menuToggle) {
-        menuToggle.addEventListener("click", () => {
+    // Toggle navigation on mobile
+    if (navToggle) {
+        navToggle.addEventListener("click", () => {
             navMenu.classList.toggle("active");
-            menuToggle.classList.toggle("active");
+            navToggle.classList.toggle("open");
         });
     }
 
-    // Highlight active section on scroll
-    const sections = document.querySelectorAll("section");
-    window.addEventListener("scroll", () => {
-        let current = "";
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 60;
-            if (pageYOffset >= sectionTop) {
-                current = section.getAttribute("id");
+    // Smooth scroll to sections
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+                window.scrollTo({
+                    top: target.offsetTop - 60,
+                    behavior: "smooth"
+                });
             }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove("active");
-            if (link.getAttribute("href") === `#${current}`) {
-                link.classList.add("active");
+            if (navMenu.classList.contains("active")) {
+                navMenu.classList.remove("active");
+                navToggle.classList.remove("open");
             }
         });
     });
+
+    // Fade-in animation for sections
+    const sections = document.querySelectorAll(".fade-in");
+    const revealOnScroll = () => {
+        const windowHeight = window.innerHeight;
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            if (sectionTop < windowHeight - 100) {
+                section.classList.add("visible");
+            }
+        });
+    };
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll();
 });

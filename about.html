@@ -1,44 +1,60 @@
-<!-- About Page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About | CyberAlpha</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <script src="assets/js/main.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - CyberAlpha</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <!-- Header / Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="index.html">CyberAlpha</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="terminal.html">Terminal</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Top Terminal Bar -->
-  <header class="terminal-bar flex justify-between items-center text-green-400">
-    <span>CyberAlpha@portfolio:~/about</span>
-    <nav class="space-x-4 text-sm">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="speaking.html">Speaking</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <h1>About CyberAlpha</h1>
+            <p>
+                CyberAlpha is a passionate cybersecurity enthusiast, developer, and community builder.
+                With expertise in ethical hacking, penetration testing, and open-source development,
+                CyberAlpha focuses on creating innovative tools, building secure environments,
+                and teaching others about the importance of cybersecurity in the modern world.
+            </p>
 
-  <!-- About Content -->
-  <main class="flex flex-col justify-center items-center min-h-screen text-green-400 px-4">
-    <div class="max-w-3xl mt-10">
-      <p class="text-lg prompt">Whoami</p>
-      <br />
-      <p class="prompt">Hey, I'm <strong>CyberAlpha</strong> — a passionate ethical hacker, AI researcher, and cybersecurity educator.</p>
-      <p class="prompt">I specialize in offensive security, building tools, and uncovering digital vulnerabilities.</p>
-      <p class="prompt">Currently teaching Linux and cybersecurity, working on OSINT tools and a JARVIS-like voice assistant for my system.</p>
-      <p class="prompt">My mission? Help others build secure, intelligent systems while making learning fun and hands-on.</p>
-      <br />
-      <p class="prompt">💻 Skills: Python, C++, Bash, Linux, Web Pentesting, OSINT, AI</p>
-      <p class="prompt">🌐 Projects: Guardian Shield, Voice Assistant (JARVIS), Custom OS, HackTheBox Labs</p>
-      <p class="prompt">🎤 Speaker at cybersecurity events & community builder in tech</p>
-    </div>
-  </main>
+            <h2>Mission</h2>
+            <p>
+                To empower individuals and organizations with the knowledge, tools, and skills they
+                need to navigate the digital world securely.
+            </p>
 
+            <h2>Skills & Expertise</h2>
+            <ul>
+                <li>Penetration Testing & Ethical Hacking</li>
+                <li>OSINT (Open Source Intelligence)</li>
+                <li>Linux Server Administration</li>
+                <li>Programming (Python, C++, Bash)</li>
+                <li>Cybersecurity Training & Awareness</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 CyberAlpha. All Rights Reserved.</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -1,93 +1,93 @@
-/* Reset */
+/* terminal.css */
+/* Reset basic styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body styling */
 body {
     background-color: #0d0d0d;
     font-family: 'Fira Code', monospace;
     color: #00ff00;
     font-size: 16px;
-    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-/* Terminal Container */
-.terminal {
-    width: 90%;
+/* Terminal window container */
+.terminal-window {
+    width: 80%;
     max-width: 900px;
-    margin: 50px auto;
     background-color: #1a1a1a;
-    border: 2px solid #00ff00;
-    border-radius: 8px;
-    box-shadow: 0 0 20px #00ff00;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
     overflow: hidden;
 }
 
-/* Terminal Header */
+/* Terminal header bar */
 .terminal-header {
-    background-color: #0d0d0d;
+    background-color: #111;
+    padding: 10px;
     display: flex;
     align-items: center;
-    padding: 10px;
-    border-bottom: 2px solid #00ff00;
+    justify-content: flex-start;
 }
 
 .terminal-header .dot {
     height: 12px;
     width: 12px;
-    margin-right: 8px;
     border-radius: 50%;
     display: inline-block;
+    margin-right: 8px;
 }
 
 .red { background-color: #ff5f56; }
 .yellow { background-color: #ffbd2e; }
 .green { background-color: #27c93f; }
 
-/* Terminal Body */
-.terminal-body {
-    padding: 15px;
-    min-height: 400px;
+/* Terminal content area */
+.terminal-content {
+    padding: 20px;
+    height: 400px;
+    overflow-y: auto;
     white-space: pre-wrap;
-    word-wrap: break-word;
 }
 
-/* Command Line */
+/* Command input area */
 .input-line {
     display: flex;
+    align-items: center;
 }
 
 .prompt {
     color: #00ff00;
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
-.input {
-    background: transparent;
+#commandInput {
+    background: none;
     border: none;
     outline: none;
     color: #00ff00;
-    flex: 1;
     font-family: inherit;
     font-size: inherit;
+    width: 100%;
 }
 
-.input::placeholder {
-    color: #00aa00;
-}
-
-/* Scrollbar Customization */
-.terminal-body::-webkit-scrollbar {
+/* Scrollbar styling */
+.terminal-content::-webkit-scrollbar {
     width: 8px;
 }
 
-.terminal-body::-webkit-scrollbar-thumb {
-    background-color: #00ff00;
-    border-radius: 4px;
+.terminal-content::-webkit-scrollbar-thumb {
+    background: #00ff00;
+    border-radius: 5px;
 }
 
-.terminal-body::-webkit-scrollbar-track {
+.terminal-content::-webkit-scrollbar-track {
     background: #1a1a1a;
 }

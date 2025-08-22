@@ -1,29 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
     const terminalOutput = document.getElementById("terminal-output");
     const terminalInput = document.getElementById("terminal-input");
-    const prompt = document.getElementById("prompt");
 
     const commands = {
-        help: "Available commands: about, skills, projects, contact, clear",
-        about: "Hi! I'm CyberAlpha, a cybersecurity enthusiast and developer.",
-        skills: "Skills: Python, C++, Linux, Web Security, Ethical Hacking",
-        projects: "Projects: Guardian Shield, Jarvis AI, Terminal Portfolio",
-        contact: "Email: cyberalpha@example.com | GitHub: github.com/cyberalpha",
+        help: "Available commands: help, about, projects, blog, contact, clear",
+        about: "Hi, I'm CyberAlpha — a cybersecurity enthusiast, ethical hacker, and developer passionate about AI and security.",
+        projects: "Check out my projects on GitHub: <a href='https://github.com/YourGitHub' target='_blank'>GitHub/CyberAlpha</a>",
+        blog: "Read my blogs here: <a href='https://yourbloglink.com' target='_blank'>CyberAlpha Blog</a>",
+        contact: "Email: your.email@example.com | LinkedIn: <a href='https://linkedin.com/in/yourprofile' target='_blank'>Your LinkedIn</a>",
         clear: ""
     };
 
     function printOutput(text) {
-        const newLine = document.createElement("div");
-        newLine.textContent = text;
-        terminalOutput.appendChild(newLine);
+        terminalOutput.innerHTML += `<div>${text}</div>`;
         terminalOutput.scrollTop = terminalOutput.scrollHeight;
     }
 
-    terminalInput.addEventListener("keydown", function (e) {
-        if (e.key === "Enter") {
-            const input = terminalInput.value.trim();
-            printOutput("> " + input);
-
+    terminalInput.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+            const input = terminalInput.value.trim().toLowerCase();
+            printOutput(`> ${input}`);
             if (commands[input]) {
                 if (input === "clear") {
                     terminalOutput.innerHTML = "";
@@ -31,10 +27,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     printOutput(commands[input]);
                 }
             } else {
-                printOutput("Command not found. Type 'help' for a list of commands.");
+                printOutput("Command not found. Type 'help' to see available commands.");
             }
-
             terminalInput.value = "";
         }
     });
+
+    printOutput("Welcome to CyberAlpha Terminal. Type 'help' to get started.");
 });

@@ -1,18 +1,45 @@
-// Terminal-style JS interactions
-// Typewriter effect for terminal intro (optional)
+// Main JavaScript for index.html
 document.addEventListener("DOMContentLoaded", () => {
-    const prompts = document.querySelectorAll(".prompt");
-    prompts.forEach((el, i) => {
-      const text = el.innerText;
-      el.innerText = "";
-      setTimeout(() => typeText(el, text), i * 400);
+    // Smooth scroll for navigation links
+    const navLinks = document.querySelectorAll("nav a");
+    navLinks.forEach(link => {
+        link.addEventListener("click", (e) => {
+            if (link.getAttribute("href").startsWith("#")) {
+                e.preventDefault();
+                document.querySelector(link.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth"
+                });
+            }
+        });
     });
-  
-    function typeText(el, text, i = 0) {
-      if (i < text.length) {
-        el.innerText += text.charAt(i);
-        setTimeout(() => typeText(el, text, i + 1), 20);
-      }
+
+    // Mobile menu toggle
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navMenu = document.querySelector("nav ul");
+
+    if (menuToggle) {
+        menuToggle.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
+            menuToggle.classList.toggle("active");
+        });
     }
-  });
-  
+
+    // Highlight active section on scroll
+    const sections = document.querySelectorAll("section");
+    window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 60;
+            if (pageYOffset >= sectionTop) {
+                current = section.getAttribute("id");
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === `#${current}`) {
+                link.classList.add("active");
+            }
+        });
+    });
+});

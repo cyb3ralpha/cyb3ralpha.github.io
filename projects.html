@@ -1,58 +1,61 @@
-<!-- Projects Page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Projects | CyberAlpha</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <script src="assets/js/main.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - CyberAlpha</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="logo">CyberAlpha</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="terminal.html">Terminal</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Top Terminal Bar -->
-  <header class="terminal-bar flex justify-between items-center text-green-400">
-    <span>CyberAlpha@portfolio:~/projects</span>
-    <nav class="space-x-4 text-sm">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="speaking.html">Speaking</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+    <main class="container">
+        <h1>Projects</h1>
+        <p class="intro">Here are some of my featured projects in cybersecurity, AI, and programming:</p>
 
-  <!-- Projects Section -->
-  <main class="flex flex-col justify-center items-center min-h-screen text-green-400 px-4">
-    <div class="max-w-3xl mt-10">
-      <p class="text-lg prompt">ls ~/projects</p>
-      <br />
-      <ul class="space-y-4 ml-4">
-        <li class="prompt">
-          <strong>🛡️ Guardian Shield</strong> – A powerful OSINT tool for recon on phone, email & domains.  
-          <br/><a href="#" class="underline">[ View on GitHub ]</a>
-        </li>
-        <li class="prompt">
-          <strong>🎙️ Voice Assistant (JARVIS-Like)</strong> – Linux voice assistant that automates tasks with speech.  
-          <br/><a href="#" class="underline">[ Demo & Source ]</a>
-        </li>
-        <li class="prompt">
-          <strong>🌐 Google Hacking Tool</strong> – Terminal tool for advanced Google dorks & reconnaissance.  
-          <br/><a href="#" class="underline">[ Try it on GitHub ]</a>
-        </li>
-        <li class="prompt">
-          <strong>📡 IP Grabber Tool</strong> – Custom link generator that logs visitor IPs and geolocation.  
-          <br/><a href="#" class="underline">[ Coming Soon ]</a>
-        </li>
-        <li class="prompt">
-          <strong>💣 Vulnerability Lab Manual</strong> – C++ project showcasing cybersecurity labs in a stylish menu-driven format.  
-          <br/><a href="#" class="underline">[ Learn More ]</a>
-        </li>
-      </ul>
-    </div>
-  </main>
+        <section class="projects-grid">
+            <div class="project-card">
+                <h2>Guardian Shield</h2>
+                <p>An OSINT tool for reconnaissance (phone, email, domain) built with Python & C++.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
 
+            <div class="project-card">
+                <h2>JARVIS Assistant</h2>
+                <p>A personal Linux-based AI voice assistant for pentesting & automation.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <h2>Vulnerability Assessment Lab</h2>
+                <p>An interactive GitHub repository for learning web application vulnerabilities.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <h2>Social Engineering Toolkit</h2>
+                <p>A custom-built social engineering framework for ethical hacking research.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 CyberAlpha. All Rights Reserved.</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -1,74 +1,49 @@
-<!-- Contact Page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact | CyberAlpha</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <script src="assets/js/main.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | CyberAlpha</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="index.html">CyberAlpha</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="terminal.html">Terminal</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Top Terminal Bar -->
-  <header class="terminal-bar flex justify-between items-center text-green-400">
-    <span>CyberAlpha@portfolio:~/contact</span>
-    <nav class="space-x-4 text-sm">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="speaking.html">Speaking</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+    <main class="contact-section">
+        <h1>Contact Me</h1>
+        <p>Want to collaborate, have questions, or just want to say hi? Fill out the form below:</p>
 
-  <!-- Contact Form Section -->
-  <main class="flex flex-col justify-center items-center min-h-screen text-green-400 px-4">
-    <div class="max-w-xl mt-10 w-full">
-      <p class="text-lg prompt">echo "Want to get in touch?"</p>
-      <br />
+        <form class="contact-form" action="#" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
 
-      <form class="space-y-4" action="https://formspree.io/f/mldjakqe" method="POST">
-        <input
-          type="text"
-          name="name"
-          placeholder="Name"
-          required
-          class="w-full bg-black border border-green-400 text-green-400 px-4 py-2"
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          required
-          class="w-full bg-black border border-green-400 text-green-400 px-4 py-2"
-        />
-        <textarea
-          name="message"
-          placeholder="Your message"
-          rows="5"
-          required
-          class="w-full bg-black border border-green-400 text-green-400 px-4 py-2"
-        ></textarea>
-        <button
-          type="submit"
-          class="bg-green-400 text-black px-6 py-2 hover:bg-green-300 transition"
-        >
-          Send Message
-        </button>
-      </form>
+        <div class="contact-info">
+            <h2>Other Ways to Connect</h2>
+            <ul>
+                <li>Email: <a href="mailto:cyberalpha@example.com">cyberalpha@example.com</a></li>
+                <li>GitHub: <a href="https://github.com/cyberalpha" target="_blank">github.com/cyberalpha</a></li>
+                <li>Twitter: <a href="https://twitter.com/cyberalpha" target="_blank">@cyberalpha</a></li>
+            </ul>
+        </div>
+    </main>
 
-      <br />
-      <p class="prompt">📫 Or ping me on:</p>
-      <ul class="ml-4 prompt">
-        <li>GitHub: <a href="https://github.com/CyberAlpha" class="underline">github.com/CyberAlpha</a></li>
-        <li>Email: <span class="underline">your.email@example.com</span></li>
-        <li>LinkedIn: <a href="#" class="underline">linkedin.com/in/cyberalpha</a></li>
-      </ul>
-    </div>
-  </main>
-
+    <footer>
+        <p>&copy; 2025 CyberAlpha. All rights reserved.</p>
+    </footer>
 </body>
 </html>

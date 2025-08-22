@@ -1,41 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CyberAlpha | Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <script src="assets/js/main.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberAlpha | Abdullah Ismail</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <script src="assets/js/main.js" defer></script>
 </head>
 <body>
+    <!-- Top Navigation Terminal Bar -->
+    <header class="header">
+        <div class="logo">CyberAlpha@portfolio:~<span class="blink">_</span></div>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="speaking.html">Speaking</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="terminal.html" class="terminal-link">Terminal</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Top Terminal Bar -->
-  <header class="terminal-bar flex justify-between items-center text-green-400">
-    <span>CyberAlpha@portfolio:~</span>
-    <nav class="space-x-4 text-sm">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="speaking.html">Speaking</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+    <!-- Hero / Welcome Section -->
+    <main class="hero">
+        <section class="intro">
+            <h1 class="title">Welcome to my portfolio!</h1>
+            <p class="subtitle">I'm <strong>Abdullah Ismail (CyberAlpha)</strong></p>
+            <p class="description">– Ethical hacker, AI & cybersecurity enthusiast.</p>
+            <p class="description">I build offensive security tools, speak at events, and love sharing knowledge.</p>
+            <div class="cta-buttons">
+                <a href="about.html" class="btn primary">About Me</a>
+                <a href="projects.html" class="btn secondary">View Projects</a>
+                <a href="terminal.html" class="btn terminal">Open Terminal</a>
+            </div>
+            <p class="footer-note">📁 Explore the tabs above to learn more about me.</p>
+            <p class="footer-note">📍 Hosted with ❤️ on GitHub Pages</p>
+        </section>
+    </main>
 
-  <!-- Welcome Section -->
-  <main class="flex flex-col justify-center items-center min-h-screen text-green-400 px-4">
-    <div class="max-w-2xl mt-10">
-      <p class="text-lg prompt">Welcome to my portfolio!</p>
-      <br />
-      <p class="prompt">I'm <strong>Abdullah Ismail AKA CyberAlpha</strong> </p>
-      <p class="prompt"> – Ethical hacker, AI & cybersecurity enthusiast.</p>
-      <p class="prompt">I  build offensive security tools, speak at events, and love sharing knowledge.</p>
-      <br />
-      <p class="prompt">📁 Explore the tabs above to learn more about me.</p>
-      <p class="prompt">📍 Hosted with ❤️ on GitHub Pages</p>
-    </div>
-  </main>
-
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 Abdullah Ismail (CyberAlpha). All Rights Reserved.</p>
+        <p>
+            <a href="https://github.com/CyberAlpha" target="_blank">GitHub</a> |
+            <a href="#" target="_blank">LinkedIn</a> |
+            <a href="#" target="_blank">Twitter</a>
+        </p>
+    </footer>
 </body>
 </html>

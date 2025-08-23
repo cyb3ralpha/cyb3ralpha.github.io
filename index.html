@@ -1,33 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CyberAlpha | Portfolio</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CyberAlpha — Modern Tech Studio</title>
+  <meta name="description" content="A Pantak.net-inspired modern, dark, animated landing page demo for CyberAlpha." />
+  <meta name="keywords" content="Pantak clone, dark website, animated hero, CyberAlpha, landing page" />
+  <meta name="author" content="CyberAlpha" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="CyberAlpha — Modern Tech Studio" />
+  <meta property="og:description" content="A sleek dark-theme demo with smooth animations and responsive layout." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/hero-bg.jpg" />
+  <meta property="og:url" content="https://example.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "CyberAlpha",
+    "url": "https://example.com",
+    "logo": "https://example.com/assets/images/logo.png",
+    "sameAs": [
+      "https://github.com/yourhandle",
+      "https://x.com/yourhandle"
+    ]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0b0d10;
+      --panel: #0f1216;
+      --muted: #9aa4b2;
+      --text: #e6edf3;
+      --brand: #7c5cff;
+      --brand-2: #27e0a3;
+      --ring: rgba(124,92,255,.4);
+      --grid: rgba(255,255,255,.04);
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 70% -10%, rgba(124,92,255,.18), transparent 60%),
+                  radial-gradient(900px 500px at 10% 0%, rgba(39,224,163,.12), transparent 55%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1150px, 92vw); margin: 0 auto; }
+
+    /* Navbar */
+    .nav {
+      position: sticky; top: 0; z-index: 50; backdrop-filter: blur(10px);
+      background: color-mix(in srgb, var(--bg) 86%, transparent);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: .9rem 0; }
+    .brand { display:flex; align-items:center; gap:.6rem; font-weight: 700; letter-spacing:.3px; }
+    .brand-logo { width: 28px; height: 28px; border-radius: 8px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); box-shadow: 0 0 0 3px var(--ring); }
+    .nav-links { display:flex; gap: 1.2rem; align-items:center; }
+    .nav-links a { padding:.4rem .6rem; border-radius:10px; color:var(--muted); }
+    .nav-links a:hover { color: var(--text); background: rgba(255,255,255,.04); }
+    .btn { padding:.7rem 1rem; border:1px solid rgba(255,255,255,.08); border-radius:12px; background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+           box-shadow: 0 8px 24px rgba(0,0,0,.25), inset 0 1px rgba(255,255,255,.08); cursor: pointer; color: var(--text); }
+    .btn:hover { transform: translateY(-1px); }
+
+    /* Hero */
+    .hero { position: relative; overflow: clip; }
+    .hero .container { display: grid; grid-template-columns: 1.2fr 1fr; align-items: center; gap: 2rem; padding: 5.5rem 0 4rem; }
+    .eyebrow { color: var(--brand-2); font-weight: 600; letter-spacing: .12em; text-transform: uppercase; font-size:.8rem; }
+    .title { font-size: clamp(2rem, 5vw, 3.25rem); line-height: 1.1; margin:.6rem 0 1rem; font-weight: 800; }
+    .title .grad { background: linear-gradient(90deg, var(--brand), var(--brand-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .lead { color: var(--muted); font-size: clamp(1rem, 2.2vw, 1.15rem); }
+    .cta { display:flex; gap: .8rem; margin-top: 1.2rem; flex-wrap: wrap; }
+    .cta .btn.primary { background: linear-gradient(135deg, var(--brand), var(--brand-2)); border: none; font-weight: 700; }
+    .cta .btn.ghost { background: transparent; }
+
+    .stats { display:flex; gap:1.4rem; margin-top:1.8rem; flex-wrap:wrap; }
+    .stat { padding: .9rem 1rem; border-radius: 14px; background: var(--panel); border:1px solid rgba(255,255,255,.06); }
+    .stat b { font-size: 1.2rem; }
+
+    /* Decorative grid + shapes */
+    .grid-bg { position:absolute; inset:0; background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px); background-size: 40px 40px; mask-image: radial-gradient(70% 60% at 70% 30%, #000 60%, transparent 100%); }
+    .orb { position:absolute; border-radius:999px; filter: blur(20px); opacity:.7; }
+    .orb.one { width: 300px; height: 300px; right: -60px; top: -40px; background: radial-gradient(circle at 30% 30%, var(--brand), transparent 60%); animation: float 9s ease-in-out infinite; }
+    .orb.two { width: 220px; height: 220px; left: -40px; bottom: -40px; background: radial-gradient(circle at 60% 60%, var(--brand-2), transparent 60%); animation: float 11s ease-in-out infinite reverse; }
+    @keyframes float { 0%,100% { transform: translateY(0)} 50% { transform: translateY(-14px)} }
+
+    /* Right visual */
+    .panel { position: relative; background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius: 20px; padding: 1.2rem; box-shadow: 0 20px 60px rgba(0,0,0,.35), inset 0 1px rgba(255,255,255,.06); }
+    .code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size:.9rem; background: #0b0e12; color: #b8c0cc; border-radius: 14px; padding: 1rem; border:1px solid rgba(255,255,255,.06); height: 360px; overflow:auto; }
+    .code b { color: #e6edf3; }
+
+    /* Sections */
+    section { padding: 4rem 0; }
+    .section-title { font-size: 1.7rem; margin-bottom: 1rem; }
+    .cards { display:grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .card { background: var(--panel); border:1px solid rgba(255,255,255,.08); border-radius: 18px; padding: 1.2rem; transition: transform .2s ease; }
+    .card:hover { transform: translateY(-4px); }
+
+    /* Footer */
+    footer { padding: 2.4rem 0; color: var(--muted); border-top:1px solid rgba(255,255,255,.06); background: #0a0c0f; }
+
+    /* Utilities */
+    .hide { display:none; }
+    .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+
+    /* Responsive */
+    @media (max-width: 980px) {
+      .hero .container { grid-template-columns: 1fr; padding-top: 4.5rem; }
+      .nav-links-desktop { display:none; }
+      .menu-btn { display: inline-flex; }
+      .cards { grid-template-columns: 1fr; }
+    }
+    @media (min-width: 981px) { .menu-btn { display:none; } }
+  </style>
 </head>
 <body>
-    <div id="terminal">
-        <div class="header">
-            <span class="dot red"></span>
-            <span class="dot yellow"></span>
-            <span class="dot green"></span>
-            <span class="title">CyberAlpha@portfolio:~</span>
-        </div>
-        <div class="content">
-            <p class="prompt">> Hello, I'm <span class="highlight">CyberAlpha</span></p>
-            <p class="prompt">> Ethical Hacker | Developer | Speaker</p>
-            <p class="prompt">> <span id="typed-text"></span><span class="cursor">█</span></p>
-            <div class="links">
-                <a href="about.html">[ About ]</a>
-                <a href="projects.html">[ Projects ]</a>
-                <a href="blog.html">[ Blog ]</a>
-                <a href="speaking.html">[ Speaking ]</a>
-                <a href="contact.html">[ Contact ]</a>
-            </div>
-        </div>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span>CyberAlpha</span>
+      </a>
+      <nav class="nav-links nav-links-desktop">
+        <a href="#services">Services</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+        <button id="themeToggle" class="btn" aria-label="Toggle dark mode">Theme</button>
+        <a class="btn" href="#contact">Get Quote</a>
+      </nav>
+      <button class="btn menu-btn" id="openMenu" aria-label="Open menu">Menu</button>
     </div>
-    <script src="assets/js/main.js"></script>
+  </header>
+
+  <!-- Mobile sheet -->
+  <div id="sheet" class="hide" style="position:fixed; inset:0; background:rgba(0,0,0,.6); backdrop-filter: blur(6px); z-index:60;">
+    <div style="position:absolute; right:0; top:0; bottom:0; width:min(88vw, 360px); background:var(--panel); border-left:1px solid rgba(255,255,255,.08); padding:1rem;">
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <strong>Menu</strong>
+        <button class="btn" id="closeMenu">Close</button>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:.6rem; margin-top:1rem;">
+        <a href="#services" onclick="closeSheet()">Services</a>
+        <a href="#blog" onclick="closeSheet()">Blog</a>
+        <a href="#contact" onclick="closeSheet()">Contact</a>
+        <button class="btn" id="themeToggleM" style="margin-top:.6rem;">Theme</button>
+        <a class="btn" href="#contact" style="margin-top:.6rem;">Get Quote</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="hero">
+    <div class="grid-bg" aria-hidden="true"></div>
+    <div class="orb one" aria-hidden="true"></div>
+    <div class="orb two" aria-hidden="true"></div>
+
+    <div class="container">
+      <div>
+        <span class="eyebrow reveal">Trusted by builders & founders</span>
+        <h1 class="title reveal" style="transition-delay:.06s">We craft <span class="grad">bold web experiences</span> that convert.</h1>
+        <p class="lead reveal" style="transition-delay:.12s">Pantak-style vibes, but uniquely yours: crisp dark UI, buttery animations, SEO-ready, and blazing fast performance.</p>
+        <div class="cta reveal" style="transition-delay:.18s">
+          <a class="btn primary" href="#contact">Start a Project</a>
+          <a class="btn ghost" href="#work">See Work</a>
+        </div>
+        <div class="stats reveal" style="transition-delay:.24s">
+          <div class="stat"><b>50+ </b>projects</div>
+          <div class="stat"><b>99.9% </b>uptime</div>
+          <div class="stat"><b>~0.9s </b>FCP</div>
+        </div>
+      </div>
+
+      <div class="panel reveal" style="transition-delay:.18s">
+        <div class="code" id="codeBlock" aria-label="Code sample" tabindex="0"><pre><b>// guardian_shield/main.py</b>
+from fastapi import FastAPI
+
+app = FastAPI(title="Guardian Shield")
+
+@app.get("/")
+def home():
+    return {"msg": "OSINT-ready. Secure by design."}
+
+# TODO: plug services + blog JSON
+</pre></div>
+      </div>
+    </div>
+  </main>
+
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title reveal">Services</h2>
+      <div class="cards">
+        <div class="card reveal"><h3>Web Dev</h3><p>Next-gen sites with performance budgets, a11y, and SEO.</p></div>
+        <div class="card reveal"><h3>Branding</h3><p>Identity systems that scale across product & web.</p></div>
+        <div class="card reveal"><h3>Security</h3><p>Ethical hardening, OSINT workflows, and blue-team ops.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog">
+    <div class="container">
+      <h2 class="section-title reveal">Latest Posts</h2>
+      <div class="cards" id="blogCards"></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title reveal">Let’s build something remarkable</h2>
+      <form class="reveal" style="display:grid; gap:.8rem; grid-template-columns: repeat(2, 1fr);" onsubmit="event.preventDefault(); alert('Submitted! (Demo)')">
+        <input required placeholder="Your name" style="grid-column: span 1; padding:.8rem; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:var(--panel); color:var(--text);" />
+        <input required type="email" placeholder="Email" style="grid-column: span 1; padding:.8rem; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:var(--panel); color:var(--text);" />
+        <textarea required placeholder="Project details" rows="4" style="grid-column: 1/-1; padding:.8rem; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:var(--panel); color:var(--text);"></textarea>
+        <button class="btn" style="grid-column: 1/-1;">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap;">
+      <span>© <span id="year"></span> CyberAlpha. All rights reserved.</span>
+      <div style="display:flex; gap:.8rem; align-items:center;">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Theme toggle with localStorage
+    const setTheme = (dark) => {
+      document.documentElement.style.colorScheme = dark ? 'dark' : 'light';
+      document.body.dataset.theme = dark ? 'dark' : 'light';
+      localStorage.setItem('theme-dark', dark ? '1' : '0');
+    }
+    const preferDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    setTheme(localStorage.getItem('theme-dark') === '1' || preferDark);
+    const themeBtn = document.getElementById('themeToggle');
+    const themeBtnM = document.getElementById('themeToggleM');
+    function toggleTheme(){ setTheme(!(localStorage.getItem('theme-dark') === '1')); }
+    themeBtn.addEventListener('click', toggleTheme);
+    if (themeBtnM) themeBtnM.addEventListener('click', toggleTheme);
+
+    // Mobile sheet
+    const sheet = document.getElementById('sheet');
+    function openSheet(){ sheet.classList.remove('hide'); }
+    function closeSheet(){ sheet.classList.add('hide'); }
+    document.getElementById('openMenu').addEventListener('click', openSheet);
+    document.getElementById('closeMenu').addEventListener('click', closeSheet);
+    window.closeSheet = closeSheet;
+
+    // Intersection Observer reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          observer.unobserve(entry.target);
+        }
+      })
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Fake blog JSON (in a real project, fetch from data/blog.json)
+    const posts = [
+      { title: 'Hardening Your Next.js App', excerpt: 'Practical steps to lock down headers, auth, and CSP.', url: '#' },
+      { title: 'OSINT Flows for Blue Teams', excerpt: 'From recon to reporting with Guardian Shield.', url: '#' },
+      { title: 'Lightning-fast Web Animations', excerpt: 'CSS vs JS vs WAAPI—what to use and when.', url: '#' },
+    ];
+    const blogWrap = document.getElementById('blogCards');
+    blogWrap.innerHTML = posts.map(p => `
+      <article class="card reveal">
+        <h3>${p.title}</h3>
+        <p>${p.excerpt}</p>
+        <a class="btn" href="${p.url}">Read →</a>
+      </article>
+    `).join('');
+    // Observe newly injected cards
+    blogWrap.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Fun: code block typing effect
+    const code = `from fastapi import FastAPI\n\napp = FastAPI(title="Guardian Shield")\n\n@app.get("/")\ndef home():\n    return {"msg": "OSINT-ready. Secure by design."}\n`;
+    const block = document.getElementById('codeBlock');
+    const pre = block.querySelector('pre');
+    let i = 0;
+    function type(){
+      if (i <= code.length){
+        const head = '<b>// guardian_shield/main.py</b>\n';
+        pre.innerHTML = head + code.slice(0, i).replace(/</g,'&lt;');
+        i++; requestAnimationFrame(type);
+      }
+    }
+    setTimeout(type, 600);
+
+    // Subtle parallax on hero
+    const hero = document.querySelector('.hero');
+    hero.addEventListener('pointermove', (e) => {
+      const r = hero.getBoundingClientRect();
+      const x = (e.clientX - r.width/2) / r.width;
+      const y = (e.clientY - r.height/2) / r.height;
+      document.querySelectorAll('.orb').forEach((o, idx) => {
+        o.style.transform = `translate(${x * (idx? -20 : 20)}px, ${y * (idx? -10 : 10)}px)`;
+      });
+    });
+  </script>
 </body>
 </html>

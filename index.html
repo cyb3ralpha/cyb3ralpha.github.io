@@ -3,150 +3,141 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CyberAlpha — Modern Tech Studio</title>
-  <meta name="description" content="A Pantak.net-inspired modern, dark, animated landing page demo for CyberAlpha." />
-  <meta name="keywords" content="Pantak clone, dark website, animated hero, CyberAlpha, landing page" />
+  <title>CyberAlpha — Portfolio | AI • Cybersecurity • Engineering</title>
+  <meta name="description" content="CyberAlpha (AI & Cybersecurity) — projects, skills, and contact. Dark, animated, fast, and SEO-ready." />
+  <meta name="keywords" content="CyberAlpha, Abdullah Ismail, AI, cybersecurity, ethical hacking, portfolio, developer" />
   <meta name="author" content="CyberAlpha" />
 
-  <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="CyberAlpha — Modern Tech Studio" />
-  <meta property="og:description" content="A sleek dark-theme demo with smooth animations and responsive layout." />
+  <!-- Open Graph -->
+  <meta property="og:title" content="CyberAlpha — Portfolio" />
+  <meta property="og:description" content="AI, Cybersecurity & Full‑stack projects. Dark + animated + fast." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/images/hero-bg.jpg" />
-  <meta property="og:url" content="https://example.com" />
+  <meta property="og:image" content="assets/images/og-cover.jpg" />
+  <meta property="og:url" content="https://your-domain.example" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- JSON-LD -->
+  <!-- JSON-LD Person -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": "Person",
     "name": "CyberAlpha",
-    "url": "https://example.com",
-    "logo": "https://example.com/assets/images/logo.png",
+    "alternateName": "Abdullah Ismail",
+    "jobTitle": "AI & Cybersecurity Engineer",
+    "url": "https://your-domain.example",
     "sameAs": [
-      "https://github.com/yourhandle",
-      "https://x.com/yourhandle"
+      "https://github.com/your-handle",
+      "https://x.com/your-handle",
+      "https://www.linkedin.com/in/your-handle/"
     ]
   }
   </script>
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #0b0d10;
-      --panel: #0f1216;
-      --muted: #9aa4b2;
-      --text: #e6edf3;
-      --brand: #7c5cff;
-      --brand-2: #27e0a3;
-      --ring: rgba(124,92,255,.4);
-      --grid: rgba(255,255,255,.04);
+      --bg: #0b0d10; --panel:#0f1216; --muted:#9aa4b2; --text:#e6edf3;
+      --brand:#7c5cff; --brand-2:#27e0a3; --ring:rgba(124,92,255,.4); --grid:rgba(255,255,255,.05);
     }
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
-    body {
-      margin: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{ margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; color:var(--text);
       background: radial-gradient(1200px 600px at 70% -10%, rgba(124,92,255,.18), transparent 60%),
-                  radial-gradient(900px 500px at 10% 0%, rgba(39,224,163,.12), transparent 55%),
-                  var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    a { color: inherit; text-decoration: none; }
-    .container { width: min(1150px, 92vw); margin: 0 auto; }
+                  radial-gradient(900px 500px at 10% 0%, rgba(39,224,163,.12), transparent 55%), var(--bg);
+      line-height:1.6 }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(1150px,92vw);margin:0 auto}
 
-    /* Navbar */
-    .nav {
-      position: sticky; top: 0; z-index: 50; backdrop-filter: blur(10px);
-      background: color-mix(in srgb, var(--bg) 86%, transparent);
-      border-bottom: 1px solid rgba(255,255,255,.06);
-    }
-    .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: .9rem 0; }
-    .brand { display:flex; align-items:center; gap:.6rem; font-weight: 700; letter-spacing:.3px; }
-    .brand-logo { width: 28px; height: 28px; border-radius: 8px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); box-shadow: 0 0 0 3px var(--ring); }
-    .nav-links { display:flex; gap: 1.2rem; align-items:center; }
-    .nav-links a { padding:.4rem .6rem; border-radius:10px; color:var(--muted); }
-    .nav-links a:hover { color: var(--text); background: rgba(255,255,255,.04); }
-    .btn { padding:.7rem 1rem; border:1px solid rgba(255,255,255,.08); border-radius:12px; background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-           box-shadow: 0 8px 24px rgba(0,0,0,.25), inset 0 1px rgba(255,255,255,.08); cursor: pointer; color: var(--text); }
-    .btn:hover { transform: translateY(-1px); }
+    /* Nav */
+    .nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);background:color-mix(in srgb, var(--bg) 86%, transparent); border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
+    .brand{display:flex;gap:.6rem;align-items:center;font-weight:800}
+    .brand-logo{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:0 0 0 3px var(--ring)}
+    .nav-links{display:flex;gap:1.1rem;align-items:center}
+    .nav-links a{padding:.45rem .65rem;border-radius:10px;color:var(--muted)}
+    .nav-links a:hover{color:var(--text);background:rgba(255,255,255,.05)}
+    .btn{padding:.7rem 1rem;border:1px solid rgba(255,255,255,.08);border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02)); box-shadow:0 8px 24px rgba(0,0,0,.25), inset 0 1px rgba(255,255,255,.08);cursor:pointer;color:var(--text)}
+    .btn:hover{transform:translateY(-1px)}
+    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));border:none;font-weight:800}
 
     /* Hero */
-    .hero { position: relative; overflow: clip; }
-    .hero .container { display: grid; grid-template-columns: 1.2fr 1fr; align-items: center; gap: 2rem; padding: 5.5rem 0 4rem; }
-    .eyebrow { color: var(--brand-2); font-weight: 600; letter-spacing: .12em; text-transform: uppercase; font-size:.8rem; }
-    .title { font-size: clamp(2rem, 5vw, 3.25rem); line-height: 1.1; margin:.6rem 0 1rem; font-weight: 800; }
-    .title .grad { background: linear-gradient(90deg, var(--brand), var(--brand-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
-    .lead { color: var(--muted); font-size: clamp(1rem, 2.2vw, 1.15rem); }
-    .cta { display:flex; gap: .8rem; margin-top: 1.2rem; flex-wrap: wrap; }
-    .cta .btn.primary { background: linear-gradient(135deg, var(--brand), var(--brand-2)); border: none; font-weight: 700; }
-    .cta .btn.ghost { background: transparent; }
+    .hero{position:relative;overflow:clip}
+    .hero .container{display:grid;grid-template-columns:1.2fr 1fr;align-items:center;gap:2rem;padding:5.5rem 0 4rem}
+    .grid-bg{position:absolute;inset:0;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:40px 40px;mask-image:radial-gradient(70% 60% at 70% 30%,#000 60%,transparent 100%)}
+    .orb{position:absolute;border-radius:999px;filter:blur(20px);opacity:.7}
+    .orb.one{width:300px;height:300px;right:-60px;top:-40px;background:radial-gradient(circle at 30% 30%,var(--brand),transparent 60%);animation:float 9s ease-in-out infinite}
+    .orb.two{width:220px;height:220px;left:-40px;bottom:-40px;background:radial-gradient(circle at 60% 60%,var(--brand-2),transparent 60%);animation:float 11s ease-in-out infinite reverse}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+    .eyebrow{color:var(--brand-2);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem}
+    .title{font-size:clamp(2rem,5vw,3.25rem);line-height:1.1;margin:.6rem 0 1rem;font-weight:900}
+    .title .grad{background:linear-gradient(90deg,var(--brand),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead{color:var(--muted);font-size:clamp(1rem,2.2vw,1.15rem)}
+    .cta{display:flex;gap:.8rem;margin-top:1.2rem;flex-wrap:wrap}
 
-    .stats { display:flex; gap:1.4rem; margin-top:1.8rem; flex-wrap:wrap; }
-    .stat { padding: .9rem 1rem; border-radius: 14px; background: var(--panel); border:1px solid rgba(255,255,255,.06); }
-    .stat b { font-size: 1.2rem; }
-
-    /* Decorative grid + shapes */
-    .grid-bg { position:absolute; inset:0; background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px); background-size: 40px 40px; mask-image: radial-gradient(70% 60% at 70% 30%, #000 60%, transparent 100%); }
-    .orb { position:absolute; border-radius:999px; filter: blur(20px); opacity:.7; }
-    .orb.one { width: 300px; height: 300px; right: -60px; top: -40px; background: radial-gradient(circle at 30% 30%, var(--brand), transparent 60%); animation: float 9s ease-in-out infinite; }
-    .orb.two { width: 220px; height: 220px; left: -40px; bottom: -40px; background: radial-gradient(circle at 60% 60%, var(--brand-2), transparent 60%); animation: float 11s ease-in-out infinite reverse; }
-    @keyframes float { 0%,100% { transform: translateY(0)} 50% { transform: translateY(-14px)} }
-
-    /* Right visual */
-    .panel { position: relative; background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius: 20px; padding: 1.2rem; box-shadow: 0 20px 60px rgba(0,0,0,.35), inset 0 1px rgba(255,255,255,.06); }
-    .code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size:.9rem; background: #0b0e12; color: #b8c0cc; border-radius: 14px; padding: 1rem; border:1px solid rgba(255,255,255,.06); height: 360px; overflow:auto; }
-    .code b { color: #e6edf3; }
+    .panel{position:relative;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:1.2rem;box-shadow:0 20px 60px rgba(0,0,0,.35), inset 0 1px rgba(255,255,255,.06)}
+    .code{font-family:"Fira Code",ui-monospace,Menlo,Consolas,monospace;font-size:.92rem;background:#0b0e12;color:#b8c0cc;border-radius:14px;padding:1rem;border:1px solid rgba(255,255,255,.06);height:360px;overflow:auto}
+    .code b{color:#e6edf3}
 
     /* Sections */
-    section { padding: 4rem 0; }
-    .section-title { font-size: 1.7rem; margin-bottom: 1rem; }
-    .cards { display:grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-    .card { background: var(--panel); border:1px solid rgba(255,255,255,.08); border-radius: 18px; padding: 1.2rem; transition: transform .2s ease; }
-    .card:hover { transform: translateY(-4px); }
+    section{padding:4rem 0}
+    .section-title{font-size:1.7rem;margin-bottom:1rem}
+    .muted{color:var(--muted)}
+    .chips{display:flex;gap:.5rem;flex-wrap:wrap}
+    .chip{padding:.45rem .6rem;background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:999px;font-size:.9rem}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+    .card{background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:1.1rem;transition:transform .2s ease;display:flex;flex-direction:column;gap:.6rem}
+    .card:hover{transform:translateY(-4px)}
+    .card .tag{font-size:.75rem;color:var(--muted)}
+    .card .actions{margin-top:auto;display:flex;gap:.6rem;flex-wrap:wrap}
+
+    /* Contact */
+    form.grid{display:grid;gap:.8rem;grid-template-columns:repeat(2,1fr)}
+    .input{padding:.8rem;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:var(--panel);color:var(--text)}
 
     /* Footer */
-    footer { padding: 2.4rem 0; color: var(--muted); border-top:1px solid rgba(255,255,255,.06); background: #0a0c0f; }
+    footer{padding:2.4rem 0;color:var(--muted);border-top:1px solid rgba(255,255,255,.06);background:#0a0c0f}
 
     /* Utilities */
-    .hide { display:none; }
-    .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
-    .reveal.in { opacity: 1; transform: translateY(0); }
+    .hide{display:none}
+    .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease, transform .6s ease}
+    .reveal.in{opacity:1;transform:translateY(0)}
 
     /* Responsive */
-    @media (max-width: 980px) {
-      .hero .container { grid-template-columns: 1fr; padding-top: 4.5rem; }
-      .nav-links-desktop { display:none; }
-      .menu-btn { display: inline-flex; }
-      .cards { grid-template-columns: 1fr; }
+    @media (max-width:980px){
+      .hero .container{grid-template-columns:1fr;padding-top:4.5rem}
+      .nav-links-desktop{display:none}
+      .menu-btn{display:inline-flex}
+      .cards{grid-template-columns:1fr}
+      form.grid{grid-template-columns:1fr}
     }
-    @media (min-width: 981px) { .menu-btn { display:none; } }
+    @media (min-width:981px){.menu-btn{display:none}}
   </style>
 </head>
 <body>
+  <!-- NAV -->
   <header class="nav">
     <div class="container nav-inner">
-      <a class="brand" href="#">
+      <a class="brand" href="#home">
         <span class="brand-logo" aria-hidden="true"></span>
         <span>CyberAlpha</span>
       </a>
       <nav class="nav-links nav-links-desktop">
-        <a href="#services">Services</a>
-        <a href="#blog">Blog</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
         <button id="themeToggle" class="btn" aria-label="Toggle dark mode">Theme</button>
-        <a class="btn" href="#contact">Get Quote</a>
+        <a class="btn" href="assets/CyberAlpha-Resume.pdf" download>Resume</a>
       </nav>
       <button class="btn menu-btn" id="openMenu" aria-label="Open menu">Menu</button>
     </div>
   </header>
 
-  <!-- Mobile sheet -->
+  <!-- MOBILE SHEET -->
   <div id="sheet" class="hide" style="position:fixed; inset:0; background:rgba(0,0,0,.6); backdrop-filter: blur(6px); z-index:60;">
     <div style="position:absolute; right:0; top:0; bottom:0; width:min(88vw, 360px); background:var(--panel); border-left:1px solid rgba(255,255,255,.08); padding:1rem;">
       <div style="display:flex; justify-content:space-between; align-items:center;">
@@ -154,89 +145,123 @@
         <button class="btn" id="closeMenu">Close</button>
       </div>
       <div style="display:flex; flex-direction:column; gap:.6rem; margin-top:1rem;">
-        <a href="#services" onclick="closeSheet()">Services</a>
-        <a href="#blog" onclick="closeSheet()">Blog</a>
+        <a href="#about" onclick="closeSheet()">About</a>
+        <a href="#projects" onclick="closeSheet()">Projects</a>
+        <a href="#skills" onclick="closeSheet()">Skills</a>
         <a href="#contact" onclick="closeSheet()">Contact</a>
         <button class="btn" id="themeToggleM" style="margin-top:.6rem;">Theme</button>
-        <a class="btn" href="#contact" style="margin-top:.6rem;">Get Quote</a>
+        <a class="btn" href="assets/CyberAlpha-Resume.pdf" download style="margin-top:.6rem;">Resume</a>
       </div>
     </div>
   </div>
 
-  <main class="hero">
+  <!-- HERO -->
+  <main id="home" class="hero">
     <div class="grid-bg" aria-hidden="true"></div>
     <div class="orb one" aria-hidden="true"></div>
     <div class="orb two" aria-hidden="true"></div>
 
     <div class="container">
       <div>
-        <span class="eyebrow reveal">Trusted by builders & founders</span>
-        <h1 class="title reveal" style="transition-delay:.06s">We craft <span class="grad">bold web experiences</span> that convert.</h1>
-        <p class="lead reveal" style="transition-delay:.12s">Pantak-style vibes, but uniquely yours: crisp dark UI, buttery animations, SEO-ready, and blazing fast performance.</p>
+        <span class="eyebrow reveal">AI • Cybersecurity • Engineering</span>
+        <h1 class="title reveal" style="transition-delay:.06s">Hi, I’m <span class="grad">CyberAlpha</span>.<br/>I build secure, blazing‑fast systems.</h1>
+        <p class="lead reveal" style="transition-delay:.12s">Student of AI & cybersecurity, pentest enthusiast, and creator of tools like <b>Guardian Shield</b> and <b>JARVIS‑style assistants</b>. I love shipping products that are <i>usable, secure, and beautiful</i>.</p>
         <div class="cta reveal" style="transition-delay:.18s">
-          <a class="btn primary" href="#contact">Start a Project</a>
-          <a class="btn ghost" href="#work">See Work</a>
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn" href="#contact">Hire Me</a>
         </div>
-        <div class="stats reveal" style="transition-delay:.24s">
-          <div class="stat"><b>50+ </b>projects</div>
-          <div class="stat"><b>99.9% </b>uptime</div>
-          <div class="stat"><b>~0.9s </b>FCP</div>
+        <div class="chips reveal" style="margin-top:1.3rem;transition-delay:.22s">
+          <span class="chip">FastAPI</span><span class="chip">Python</span><span class="chip">C++</span><span class="chip">Linux</span><span class="chip">OSINT</span><span class="chip">Next.js</span><span class="chip">Tailwind</span><span class="chip">Docker</span>
         </div>
       </div>
 
       <div class="panel reveal" style="transition-delay:.18s">
-        <div class="code" id="codeBlock" aria-label="Code sample" tabindex="0"><pre><b>// guardian_shield/main.py</b>
-from fastapi import FastAPI
+        <div class="code" id="codeBlock" aria-label="Code sample" tabindex="0"><pre><b># whoami.py</b>
+class CyberAlpha:
+    stack = ["Python","C++","FastAPI","Linux","OSINT"]
+    mission = "Build secure, human‑friendly systems"
 
-app = FastAPI(title="Guardian Shield")
-
-@app.get("/")
-def home():
-    return {"msg": "OSINT-ready. Secure by design."}
-
-# TODO: plug services + blog JSON
+    def hello(self):
+        return "Assalamualaikum — let's ship!"
 </pre></div>
       </div>
     </div>
   </main>
 
-  <section id="services">
+  <!-- ABOUT -->
+  <section id="about">
     <div class="container">
-      <h2 class="section-title reveal">Services</h2>
-      <div class="cards">
-        <div class="card reveal"><h3>Web Dev</h3><p>Next-gen sites with performance budgets, a11y, and SEO.</p></div>
-        <div class="card reveal"><h3>Branding</h3><p>Identity systems that scale across product & web.</p></div>
-        <div class="card reveal"><h3>Security</h3><p>Ethical hardening, OSINT workflows, and blue-team ops.</p></div>
+      <h2 class="section-title reveal">About</h2>
+      <p class="muted reveal">I’m Abdullah “CyberAlpha” Ismail — an AI & Cybersecurity student focused on ethical hacking, OSINT, and developer experience. I design systems with a performance budget, strong security headers, and clear UX. I also teach Linux to cybersecurity students and speak about security.
+      </p>
+      <div class="cards" style="margin-top:1rem">
+        <div class="card reveal">
+          <strong>Focus</strong>
+          <p class="muted">Offensive security labs, OSINT tooling, secure web apps, and human‑centered automation.</p>
+        </div>
+        <div class="card reveal">
+          <strong>Highlights</strong>
+          <ul class="muted" style="margin:0;padding-left:1.1rem">
+            <li>Built <b>Guardian Shield</b> (OSINT suite) — Linux‑first.</li>
+            <li>JARVIS‑style voice assistant with TTS & local models.</li>
+            <li>Interactive “Vulnerability Assessment” e‑book repo.</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <strong>Currently</strong>
+          <p class="muted">Building security tools, teaching Linux, and preparing talks for the community.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="blog">
+  <!-- PROJECTS -->
+  <section id="projects">
     <div class="container">
-      <h2 class="section-title reveal">Latest Posts</h2>
-      <div class="cards" id="blogCards"></div>
+      <h2 class="section-title reveal">Projects</h2>
+      <div id="projectGrid" class="cards"></div>
     </div>
   </section>
 
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title reveal">Skills</h2>
+      <div class="cards">
+        <div class="card reveal"><h3>Security</h3><p class="muted">OSINT, web pentesting, auth & access control, CSP, SSRF/SQLi/XSS mitigation.</p></div>
+        <div class="card reveal"><h3>Backend</h3><p class="muted">Python, FastAPI, Node/Express, PostgreSQL, REST, WebSockets, Docker.</p></div>
+        <div class="card reveal"><h3>Frontend</h3><p class="muted">Next.js, React, HTML/CSS, Tailwind, a11y, performance budgets, SEO.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
   <section id="contact">
     <div class="container">
-      <h2 class="section-title reveal">Let’s build something remarkable</h2>
-      <form class="reveal" style="display:grid; gap:.8rem; grid-template-columns: repeat(2, 1fr);" onsubmit="event.preventDefault(); alert('Submitted! (Demo)')">
-        <input required placeholder="Your name" style="grid-column: span 1; padding:.8rem; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:var(--panel); color:var(--text);" />
-        <input required type="email" placeholder="Email" style="grid-column: span 1; padding:.8rem; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:var(--panel); color:var(--text);" />
-        <textarea required placeholder="Project details" rows="4" style="grid-column: 1/-1; padding:.8rem; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:var(--panel); color:var(--text);"></textarea>
-        <button class="btn" style="grid-column: 1/-1;">Send Message</button>
+      <h2 class="section-title reveal">Contact</h2>
+      <p class="muted reveal">Let’s collaborate on something meaningful. For gigs, mentorship, or speaking — drop a message.</p>
+      <form class="grid reveal" onsubmit="event.preventDefault(); alert('Submitted! (Demo)')">
+        <input class="input" required placeholder="Your name" />
+        <input class="input" required type="email" placeholder="Email" />
+        <textarea class="input" required placeholder="Message" rows="4" style="grid-column:1/-1"></textarea>
+        <div class="chips" style="grid-column:1/-1">
+          <a class="btn" href="mailto:you@example.com">Email</a>
+          <a class="btn" href="https://t.me/your-handle" target="_blank" rel="noopener">Telegram</a>
+          <a class="btn" href="https://github.com/your-handle" target="_blank" rel="noopener">GitHub</a>
+          <button class="btn primary" type="submit">Send</button>
+        </div>
       </form>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
-    <div class="container" style="display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap;">
-      <span>© <span id="year"></span> CyberAlpha. All rights reserved.</span>
-      <div style="display:flex; gap:.8rem; align-items:center;">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap">
+      <span>© <span id="year"></span> CyberAlpha. Built with ❤️ and strong headers.</span>
+      <div style="display:flex;gap:.8rem;align-items:center">
         <a href="#">Privacy</a>
         <a href="#">Terms</a>
-        <a href="#">GitHub</a>
+        <a href="https://github.com/your-handle" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
   </footer>
@@ -245,7 +270,7 @@ def home():
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Theme toggle with localStorage
+    // Theme toggle
     const setTheme = (dark) => {
       document.documentElement.style.colorScheme = dark ? 'dark' : 'light';
       document.body.dataset.theme = dark ? 'dark' : 'light';
@@ -256,8 +281,8 @@ def home():
     const themeBtn = document.getElementById('themeToggle');
     const themeBtnM = document.getElementById('themeToggleM');
     function toggleTheme(){ setTheme(!(localStorage.getItem('theme-dark') === '1')); }
-    themeBtn.addEventListener('click', toggleTheme);
-    if (themeBtnM) themeBtnM.addEventListener('click', toggleTheme);
+    themeBtn?.addEventListener('click', toggleTheme);
+    themeBtnM?.addEventListener('click', toggleTheme);
 
     // Mobile sheet
     const sheet = document.getElementById('sheet');
@@ -267,57 +292,44 @@ def home():
     document.getElementById('closeMenu').addEventListener('click', closeSheet);
     window.closeSheet = closeSheet;
 
-    // Intersection Observer reveal
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in');
-          observer.unobserve(entry.target);
-        }
-      })
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    // Reveal on view
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); observer.unobserve(e.target);} })
+    }, {threshold:0.12});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
-    // Fake blog JSON (in a real project, fetch from data/blog.json)
-    const posts = [
-      { title: 'Hardening Your Next.js App', excerpt: 'Practical steps to lock down headers, auth, and CSP.', url: '#' },
-      { title: 'OSINT Flows for Blue Teams', excerpt: 'From recon to reporting with Guardian Shield.', url: '#' },
-      { title: 'Lightning-fast Web Animations', excerpt: 'CSS vs JS vs WAAPI—what to use and when.', url: '#' },
-    ];
-    const blogWrap = document.getElementById('blogCards');
-    blogWrap.innerHTML = posts.map(p => `
-      <article class="card reveal">
-        <h3>${p.title}</h3>
-        <p>${p.excerpt}</p>
-        <a class="btn" href="${p.url}">Read →</a>
-      </article>
-    `).join('');
-    // Observe newly injected cards
-    blogWrap.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    // Fun: code block typing effect
-    const code = `from fastapi import FastAPI\n\napp = FastAPI(title="Guardian Shield")\n\n@app.get("/")\ndef home():\n    return {"msg": "OSINT-ready. Secure by design."}\n`;
-    const block = document.getElementById('codeBlock');
-    const pre = block.querySelector('pre');
-    let i = 0;
-    function type(){
-      if (i <= code.length){
-        const head = '<b>// guardian_shield/main.py</b>\n';
-        pre.innerHTML = head + code.slice(0, i).replace(/</g,'&lt;');
-        i++; requestAnimationFrame(type);
-      }
-    }
+    // Typing effect
+    const code = `class CyberAlpha:\n    stack = ["Python","C++","FastAPI","Linux","OSINT"]\n    mission = "Build secure, human‑friendly systems"\n\n    def hello(self):\n        return "Assalamualaikum — let's ship!"\n`;
+    const pre = document.querySelector('#codeBlock pre');
+    let i=0; function type(){ if(i<=code.length){ const head='<b># whoami.py</b>\n'; pre.innerHTML=head+code.slice(0,i).replace(/</g,'&lt;'); i++; requestAnimationFrame(type);} }
     setTimeout(type, 600);
 
-    // Subtle parallax on hero
+    // Projects data (could be external /data/projects.json)
+    const projects = [
+      {title:'Guardian Shield', tag:'OSINT • Linux', desc:'Modular OSINT suite with phone/email/domain recon, logging, and CLI/GUI.', links:[{label:'Repo', url:'#'},{label:'Docs', url:'#'}]},
+      {title:'JARVIS Assistant', tag:'Voice • Local AI', desc:'Desktop voice assistant with wake word, TTS, and local model inference.', links:[{label:'Repo', url:'#'}]},
+      {title:'Vulnerability Assessment eBook', tag:'Learning • WebSec', desc:'Interactive GitHub repo with 140+ lab topics for web security study.', links:[{label:'Repo', url:'#'}]},
+      {title:'Terminal Portfolio', tag:'Frontend • Fun', desc:'Terminal-style portfolio with command palette and ASCII UI.', links:[{label:'Live', url:'#'},{label:'Repo', url:'#'}]},
+      {title:'Debian Home Server', tag:'Ops • DevOps', desc:'Homelab on Debian with reverse proxy, monitoring, and CI builds.', links:[{label:'Notes', url:'#'}]},
+      {title:'Google Dorking Tool', tag:'OSINT • CLI', desc:'Handy CLI to chain search operators for recon (edu only).', links:[{label:'Repo', url:'#'}]}
+    ];
+    const grid = document.getElementById('projectGrid');
+    grid.innerHTML = projects.map(p=>`
+      <article class="card reveal">
+        <span class="tag">${p.tag}</span>
+        <h3>${p.title}</h3>
+        <p class="muted">${p.desc}</p>
+        <div class="actions">${p.links.map(l=>`<a class="btn" href="${l.url}" target="_blank" rel="noopener">${l.label} →</a>`).join('')}</div>
+      </article>
+    `).join('');
+    grid.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+    // Subtle parallax on hero blobs
     const hero = document.querySelector('.hero');
-    hero.addEventListener('pointermove', (e) => {
+    hero.addEventListener('pointermove', (e)=>{
       const r = hero.getBoundingClientRect();
-      const x = (e.clientX - r.width/2) / r.width;
-      const y = (e.clientY - r.height/2) / r.height;
-      document.querySelectorAll('.orb').forEach((o, idx) => {
-        o.style.transform = `translate(${x * (idx? -20 : 20)}px, ${y * (idx? -10 : 10)}px)`;
-      });
+      const x=(e.clientX - r.width/2)/r.width; const y=(e.clientY - r.height/2)/r.height;
+      document.querySelectorAll('.orb').forEach((o,i)=>{ o.style.transform = `translate(${x*(i?-20:20)}px, ${y*(i?-10:10)}px)`; });
     });
   </script>
 </body>
